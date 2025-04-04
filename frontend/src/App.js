@@ -9,30 +9,33 @@ import Community from "./pages/Community";
 import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
-import { AuthProvider } from "./context/AuthContext";
-import { CartProvider } from "./context/CartContext";
-import "./App.css";
+import Register from "./pages/register"; // Fixed case mismatch
+import { AuthProvider } from "./context/AuthContext"; // Fixed case mismatch
+import { CartProvider } from "./context/CartContext"; // Fixed case mismatch
+import "./index.css"; // Ensure Tailwind CSS is imported
+//import { CartProvider } from './CartContext';
 
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
         <Router>
-          <Navbar />
-          <div className="min-h-screen bg-gray-100 text-gray-900">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/community" element={<Community />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-            </Routes>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <div className="flex-grow bg-gray-100 text-gray-900">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
         </Router>
       </CartProvider>
     </AuthProvider>

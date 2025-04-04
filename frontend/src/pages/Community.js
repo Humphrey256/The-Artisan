@@ -1,12 +1,11 @@
 // src/pages/Community.js
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import '../styles/Community.css';
+import Navbar from '../components/Navbar'; // Added import
+import Footer from '../components/Footer'; // Added import
 
 const Community = () => {
   const [activeTab, setActiveTab] = useState('featured');
-  
+
   // Sample data
   const featuredArtists = [
     { id: 1, name: 'Priya Patel', art: '/images/art1.jpg', likes: 142, bio: 'Watercolorist exploring cultural identity' },
@@ -26,27 +25,29 @@ const Community = () => {
   return (
     <div className="community-page">
       <Navbar />
-      
-      <section className="community-hero">
-        <h1>Join Our Creative Family</h1>
-        <p>Connect with artists worldwide and share your journey.</p>
+
+      <section className="bg-gray-100 py-10">
+        <h1 className="text-4xl font-bold text-center">Join Our Creative Family</h1>
+        <p className="text-center text-gray-700 mt-4">
+          Connect with artists worldwide and share your journey.
+        </p>
       </section>
 
       <div className="tabs">
-        <button 
-          onClick={() => setActiveTab('featured')} 
+        <button
+          onClick={() => setActiveTab('featured')}
           className={activeTab === 'featured' ? 'active' : ''}
         >
           Featured Artists
         </button>
-        <button 
-          onClick={() => setActiveTab('galleries')} 
+        <button
+          onClick={() => setActiveTab('galleries')}
           className={activeTab === 'galleries' ? 'active' : ''}
         >
           User Galleries
         </button>
-        <button 
-          onClick={() => setActiveTab('events')} 
+        <button
+          onClick={() => setActiveTab('events')}
           className={activeTab === 'events' ? 'active' : ''}
         >
           Events
