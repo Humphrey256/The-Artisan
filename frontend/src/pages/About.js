@@ -1,7 +1,6 @@
 // src/pages/About.js
 import React from 'react';
-import Navbar from '../components/Navbar'; // Added import
-import Footer from '../components/Footer'; // Added import
+
 
 const About = () => {
   const artists = [

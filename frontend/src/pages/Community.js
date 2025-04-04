@@ -1,7 +1,6 @@
 // src/pages/Community.js
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar'; // Added import
-import Footer from '../components/Footer'; // Added import
+
 
 const Community = () => {
   const [activeTab, setActiveTab] = useState('featured');
