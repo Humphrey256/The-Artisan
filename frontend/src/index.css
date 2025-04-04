@@ -25,4 +25,32 @@ footer {
   /* Reduced height */
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa; /* Optional background color */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 1rem; /* Add spacing between items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333; /* Adjust color as needed */
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #007bff; /* Optional hover effect */
+}
 /* Custom styles (if needed) */
