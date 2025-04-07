@@ -14,7 +14,7 @@ const About = () => {
       <section className="bg-gray-100 py-10">
         <h1 className="text-4xl font-bold text-center">Our Story</h1>
         <p className="text-center text-gray-700 mt-4">
-          Celebrating art that connects people and cultures since 2015.
+          Celebrating art that connects people and cultures since 2000.
         </p>
       </section>
 
